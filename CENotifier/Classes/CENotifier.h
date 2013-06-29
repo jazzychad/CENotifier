@@ -35,11 +35,11 @@
 
 + (CENotifier *)sharedCENotifier;
 
-+ (void)displayInView:(UIView *)v imageurl:(NSString *)imageurl title:(NSString *)title text:(NSString *)text duration:(NSTimeInterval)duration userInfo:(NSDictionary *)userInfo delegate:(id <CENotifyViewDelegate, NSObject>) delegate;
++ (void)displayInView:(UIView *)v imageurl:(NSString *)imageurl title:(NSString *)title text:(NSString *)text duration:(NSTimeInterval)duration userInfo:(NSDictionary *)userInfo delegate:(id <CENotifyViewDelegate, NSObject>)delegate;
 
-+ (void)displayInView:(UIView *)v image:(UIImage *)image title:(NSString *)title text:(NSString *)text duration:(NSTimeInterval)duration userInfo:(NSDictionary *)userInfo delegate:(id <CENotifyViewDelegate, NSObject>) delegate;
++ (void)displayInView:(UIView *)v image:(UIImage *)image title:(NSString *)title text:(NSString *)text duration:(NSTimeInterval)duration userInfo:(NSDictionary *)userInfo delegate:(id <CENotifyViewDelegate, NSObject>)delegate;
 
-+ (CGRect) frameForView:(CENotifyView *)view;
++ (CGRect)frameForView:(CENotifyView *)view;
 
 + (void)removeAllNotifications;
 
@@ -49,4 +49,3 @@
 
 
 @end
-

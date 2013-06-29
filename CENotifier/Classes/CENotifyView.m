@@ -75,10 +75,11 @@
     UIImage *cachedImage = [imageCache imageFromDiskCacheForKey:imageurl];
 
 
-    if (cachedImage)
+    if (cachedImage) {
         [self displayInView:v frame:frame image:cachedImage title:title text:text duration:duration];
-    else
+    } else {
         [self displayInView:v frame:frame image:[UIImage imageNamed:@"Icon"] title:title text:text duration:duration];
+    }
 }
 
 - (void)displayInView:(UIView *)v frame:(CGRect)frame image:(UIImage *)image title:(NSString *)title text:(NSString *)text duration:(NSTimeInterval)duration
@@ -154,12 +155,13 @@
                      }
 
                      completion:^(BOOL finished) {
-                         if ([self superview])
+                         if ([self superview]) {
                              [self removeFromSuperview];
+                         }
 
-                         if (_delegate && [_delegate respondsToSelector:@selector(notifyView:didDisappear:animated:)])
-
+                         if (_delegate && [_delegate respondsToSelector:@selector(notifyView:didDisappear:animated:)]) {
                              [_delegate notifyView:self didDisappear:self.userInfo animated:YES];
+                         }
                      }];
 }
 
@@ -167,12 +169,13 @@
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
 
-    if ([self superview])
+    if ([self superview]) {
         [self removeFromSuperview];
+    }
 
-    if (_delegate && [_delegate respondsToSelector:@selector(notifyView:didDisappear:animated:)])
-
+    if (_delegate && [_delegate respondsToSelector:@selector(notifyView:didDisappear:animated:)]) {
         [_delegate notifyView:self didDisappear:self.userInfo animated:NO];
+    }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -184,17 +187,17 @@
     if (point.x >= 0.0 && point.x <= 50.0 && point.y >= 0 && point.y <= 50.0) {
         [NSObject cancelPreviousPerformRequestsWithTarget:self];
 
-        if (_delegate && [_delegate respondsToSelector:@selector(notifyView:didCancel:)])
-
+        if (_delegate && [_delegate respondsToSelector:@selector(notifyView:didCancel:)]) {
             [_delegate notifyView:self didCancel:self.userInfo];
+        }
 
         [self removeView];
     } else {
         [NSObject cancelPreviousPerformRequestsWithTarget:self];
 
-        if (_delegate && [_delegate respondsToSelector:@selector(notifyView:didReceiveInteraction:)])
-
+        if (_delegate && [_delegate respondsToSelector:@selector(notifyView:didReceiveInteraction:)]) {
             [_delegate notifyView:self didReceiveInteraction:self.userInfo];
+        }
 
         [self removeView];
     }

@@ -47,8 +47,8 @@
 
 - (void)removeViewNow;
 
-+ (CGSize) renderedSizeForText:(NSString *)text;
-+ (CGSize) renderedSizeForTitle:(NSString *)text;
++ (CGSize)renderedSizeForText:(NSString *)text;
++ (CGSize)renderedSizeForTitle:(NSString *)text;
 
 @end
 

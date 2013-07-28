@@ -10,6 +10,19 @@ Add in-app ambient notifications with growl-like alerts.
 
 Demo video at [http://youtu.be/Ee7aiKoDaGg](http://youtu.be/Ee7aiKoDaGg)
 
+## Demo Project
+
+The demo project uses SDWebImage as a git submodule. After you `git
+clone` this repo, do the following:
+
+```bash
+git submodule init
+git submodule update
+```
+
+This will clone SDWebImage into the project, and from there you should
+be able to compile the demo project.
+
 ## How To Use
 
 Clone this repo and add the CENotifier.h/m and CENotifyView.h/m files

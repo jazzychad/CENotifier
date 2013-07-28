@@ -206,7 +206,8 @@
 				631927EA17A4E26600832813 /* UIImageView+WebCache.m */,
 			);
 			name = SDWebImage;
-			sourceTree = "<group>";
+			path = CENotifier/Classes/SDWebImage;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 

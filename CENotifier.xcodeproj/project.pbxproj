@@ -170,9 +170,8 @@
 				63007BA5177F70FD00B740EB /* CENotifyView.h */,
 				63007BA6177F70FD00B740EB /* CENotifyView.m */,
 			);
-			name = Classes;
-			path = /Users/chad/Documents/iphoneapps/CENotifier/CENotifier/Classes;
-			sourceTree = "<absolute>";
+			path = Classes;
+			sourceTree = "<group>";
 		};
 		63007BA9177F711F00B740EB /* SDWebImage */ = {
 			isa = PBXGroup;
